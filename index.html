@@ -131,6 +131,10 @@
                         <th scope="row">Fakultas</th>\
                         <td>' + (feature.properties['Desc_Fakultas'] !== null ? autolinker.link(feature.properties['Desc_Fakultas'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                 <tr>\
+                        <th scope="row">Foto Kampus</th>\
+                        <td>' + (feature.properties['Foto 1'] !== null ? '<img src="images/' + String(feature.properties['Foto 1']).replace(/[\\\/:]/g, '_').trim() + '" '+ 'class=popupImage' +'>' :'') '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
